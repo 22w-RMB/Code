@@ -70,6 +70,6 @@ public class HistogramView extends View {
                 800,500,800,350,
         };
         canvas.drawLines(lines3,paint);
-
+        // sa
     }
 }

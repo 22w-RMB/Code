@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MusicPlayerTest</string>
+    <string name="last_btn">上一首</string>
+    <string name="start_btn">播放</string>
+    <string name="pause_btn">暂停</string>
+    <string name="stop_btn">停止</string>
+    <string name="next_btn">下一首</string>
+</resources>

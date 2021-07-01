@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fly_music_color_item_delete_u">#ffffff</color>
+    <color name="fly_music_color_item_delete_p">#2CFAFF</color>
+    <color name="fly_music_scaning_color">#02F4FD</color>
+    <color name="fly_music_select_textview_color">#02F4FD</color>
+    <color name="fly_music_unselect_textview_color">#ffffff</color>
+    <color name="fly_music_music_title_color">#00f0ff</color>
+    <color name="fly_music_btmusic_title_color">#ffffff</color>
+    <color name="fly_music_music_scaning_progress_color">#00f0ff</color>
+    <color name="fly_music_music_time_color">#bbe7f2</color>
+    <color name="fly_music_color_dialog_tips">#a6d1d3</color>
+    <color name="fly_music_color_dialog_text_color">#ffffff</color>
+    <color name="fly_music_dialog_text_color_d">#00f6ff</color>
+    <color name="fly_music_dialog_text_color_u">#ffffff</color>
+
+</resources>

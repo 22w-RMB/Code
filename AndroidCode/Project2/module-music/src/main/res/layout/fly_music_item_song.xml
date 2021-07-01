@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ResourceName">
+
+    <data>
+
+        <variable
+            name="Song"
+            type="cn.flyaudio.module_music.bean.Song" />
+
+        <variable
+            name="number"
+            type="String" />
+    </data>
+    <!--     android:background="?attr/selectableItemBackground"-->
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/fly_music_list_item"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingStart="20dp">
+
+        <RelativeLayout
+            android:id="@+id/songItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingTop="5dp"
+                android:text="@{number}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fly_music_list_item_text_size"
+                tools:text="1." />
+
+            <TextView
+                android:id="@+id/song_title"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/iv_rename"
+                android:layout_toEndOf="@+id/tv_number"
+                android:ellipsize="end"
+                android:paddingStart="12dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:text="@{Song.name}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fly_music_list_item_text_size"
+                tools:ignore="RtlSymmetry"
+                tools:text="overload" />
+
+            <ImageView
+                android:id="@+id/iv_rename"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:layout_toStartOf="@+id/iv_del"
+                android:visibility="gone" />
+            <!--   android:background="@drawable/fly_audiovideo_rename_n"-->
+            <ImageView
+                android:id="@+id/iv_del"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:visibility="gone" />
+            <!--                android:background="@drawable/fly_audiovideo_del_n"
+           -->
+            <ImageView
+                android:id="@+id/iv_play"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/fly_music_icon_playing" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

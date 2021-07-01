@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ResourceName">
+
+    <data>
+
+        <variable
+            name="singer"
+            type="cn.flyaudio.module_music.bean.Singer" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/fly_music_list_item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="6dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{singer.name}"
+            android:textSize="@dimen/fly_music_list_item_text_size"
+            />
+
+        <TextView
+            android:id="@+id/tv_gong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fly_music_total"
+            android:textSize="@dimen/fly_music_list_item_text_size"
+            />
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(singer.list.size())}"
+            android:textSize="@dimen/fly_music_list_item_text_size"
+            />
+
+        <TextView
+            android:id="@+id/tv_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fly_music_shousong"
+            android:textSize="@dimen/fly_music_list_item_text_size"
+            />
+
+    </LinearLayout>
+</layout>

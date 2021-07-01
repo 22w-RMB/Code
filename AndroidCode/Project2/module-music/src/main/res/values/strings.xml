@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="fly_music_app_name">音乐</string>
+    <string name="fly_music_scaning">正在扫描...</string>
+    <string name="fly_music_song_invalid">当前歌曲无效</string>
+    <string name="fly_music_total">共</string>
+    <string name="fly_music_shousong">首歌曲</string>
+    <string name="fly_music_music">音乐</string>
+    <string name="fly_music_music_dilog_tip">歌曲</string>
+    <string name="fly_music_delete_music_file">是否删除该歌曲</string>
+    <string name="fly_music_cancel">取消</string>
+    <string name="fly_music_sure">确定</string>
+    <string name="fly_music_btmusic">蓝牙音乐</string>
+</resources>

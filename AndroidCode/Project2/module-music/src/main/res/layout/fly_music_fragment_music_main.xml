@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ResourceName">
+
+    <data>
+
+        <import type="cn.flyaudio.module_music.util.TimeUtil" />
+
+        <import type="cn.flyaudio.module_music.constant.SPKey" />
+
+        <variable
+            name="viewModel"
+            type="cn.flyaudio.module_music.ui.viewmodel.MusicMainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fly_music_music_bg">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.666" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="@+id/gl_right"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_h_0667"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.667" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_h_0094"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.094" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="41dp"
+                android:layout_marginTop="34dp"
+                android:background="@drawable/fly_music_title_p"
+                android:gravity="center"
+                android:text="@string/fly_music_music"
+                android:textColor="@color/fly_music_music_title_color"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_bt_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/fly_music_title_n"
+                android:gravity="center"
+                android:onClick="@{viewModel.onClickListener}"
+                android:text="@string/fly_music_btmusic"
+                android:textColor="@color/fly_music_btmusic_title_color"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_music"
+                app:layout_constraintTop_toTopOf="@+id/tv_music" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_music_title"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="31dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@{viewModel.songName}"
+                android:textColor="#ffffffff"
+                android:textSize="32sp"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_music"
+                app:layout_constraintTop_toBottomOf="@+id/tv_music"
+                tools:text="风恋歌" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_music_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7.5dp"
+                android:text="@{viewModel.songSinger}"
+                android:textColor="#ffffffff"
+                android:textSize="23sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_music_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_music_title"
+                tools:ignore="SmallSp"
+                tools:text="恋恋古人难" />
+
+            <ProgressBar
+                android:id="@+id/tv_music_loading_img"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="17dp"
+                android:indeterminateTint="@color/fly_music_music_scaning_progress_color"
+                android:visibility="@{viewModel.loadingState}"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_music_author"
+                app:layout_constraintTop_toBottomOf="@+id/tv_music_author" />
+            <!--                           imageLocalInt="@{viewModel.imageLoadingObservable}"
+          -->
+            <!--tools:src="@drawable/fly_audiovideo_loading"-->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_music_loading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:text="@string/fly_music_scaning"
+                android:textColor="@color/fly_music_scaning_color"
+                android:textSize="23sp"
+                android:visibility="@{viewModel.loadingState}"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_music_loading_img"
+                app:layout_constraintLeft_toRightOf="@+id/tv_music_loading_img"
+                app:layout_constraintTop_toTopOf="@+id/tv_music_loading_img"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/tv_path"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="@{viewModel.loadingPath}"
+                android:textColor="@color/fly_music_scaning_color"
+                android:textSize="23sp"
+                android:visibility="@{viewModel.loadingState}"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_music_loading_img"
+                app:layout_constraintEnd_toStartOf="@+id/tv_music_more"
+                app:layout_constraintStart_toEndOf="@+id/tv_music_loading_text"
+                app:layout_constraintTop_toTopOf="@+id/tv_music_loading_img"
+                tools:text="1122222222222222222222222222222222" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_h_0586"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.586" />
+
+            <ImageView
+                android:id="@+id/tv_music_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:onClickCommand="@{viewModel.audioEffectOnClick}"
+                android:src="@drawable/fly_music_audio_effect"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_music_title"
+                app:layout_constraintStart_toStartOf="@+id/gl_h_0586"
+                app:layout_constraintTop_toTopOf="@+id/tv_music_title" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/fly_music_shadow"
+                app:layout_constraintEnd_toEndOf="@+id/iv_album_default"
+                app:layout_constraintStart_toStartOf="@+id/iv_album_default"
+                app:layout_constraintTop_toBottomOf="@+id/iv_album_default" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_h_0702"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.702" />
+
+            <!-- 专辑图片，与默认专辑互斥 -->
+            <ImageView
+                android:id="@+id/iv_music_album"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="42dp"
+                android:visibility="@{viewModel.currentAlbumBitmap!=null}"
+                app:imageBitmap="@{viewModel.currentAlbumBitmap}"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/gl_h_0702"
+                app:layout_constraintTop_toTopOf="@+id/tv_music_more" />
+
+            <!-- 默认专辑-->
+            <ImageView
+                android:id="@+id/iv_album_default"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="42dp"
+                android:src="@drawable/fly_music_music_icon_default"
+                android:visibility="@{viewModel.currentAlbumBitmap==null}"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/gl_h_0702"
+                app:layout_constraintTop_toTopOf="@+id/tv_music_more" />
+            <!-- 专辑默认前景-->
+            <ImageView
+                android:id="@+id/iv_album_foreground"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="42dp"
+                android:src="@drawable/fly_music_music_foreground"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/gl_h_0702"
+                app:layout_constraintTop_toTopOf="@+id/tv_music_more" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="@{TimeUtil.formatTime(viewModel.currentProgress)}"
+                android:textColor="@color/fly_music_music_time_color"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/seekBar"
+                app:layout_constraintStart_toStartOf="@+id/seekBar"
+                tools:text="0:00" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="@{TimeUtil.formatTime(viewModel.maxProgress)}"
+                android:textColor="@color/fly_music_music_time_color"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/seekBar"
+                app:layout_constraintEnd_toEndOf="@+id/seekBar"
+                tools:text="0:00" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_v_0594"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.594" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_v_0069"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.04" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:max="@{viewModel.maxProgress}"
+                android:maxHeight="4dp"
+                android:minHeight="4dp"
+                android:progress="@{viewModel.currentProgress}"
+                android:progressDrawable="@drawable/fly_music_seekbar"
+                android:splitTrack="false"
+                android:thumb="@drawable/fly_music_seekbar_thumb"
+                app:layout_constraintEnd_toEndOf="@+id/gl_h_0667"
+                app:layout_constraintStart_toStartOf="@+id/gl_v_0069"
+                app:layout_constraintTop_toTopOf="@+id/gl_v_0594" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_h_0067"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.067" />
+
+            <ImageView
+                android:id="@+id/iv_earch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fly_music_icon_search"
+                app:isThrottleFirst="@{Boolean.TRUE}"
+                app:layout_constraintBottom_toBottomOf="@+id/fl_playstate"
+                app:layout_constraintStart_toStartOf="@+id/gl_h_0067"
+                app:layout_constraintTop_toTopOf="@+id/fl_playstate"
+                app:onClickCommand="@{viewModel.searchOnClick}" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_h_0251"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.251" />
+
+            <ImageView
+                android:id="@+id/iv_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fly_music_icon_last"
+                app:isThrottleFirst="@{Boolean.TRUE}"
+                app:layout_constraintBottom_toBottomOf="@+id/fl_playstate"
+                app:layout_constraintStart_toStartOf="@+id/gl_h_0251"
+                app:layout_constraintTop_toTopOf="@+id/fl_playstate"
+                app:onClickCommand="@{viewModel.lastOnClick}" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_h_044"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.44" />
+
+            <FrameLayout
+                android:id="@+id/fl_playstate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/gl_h_044">
+                <!-- app:layout_constraintEnd_toEndOf="parent"-->
+                <ImageView
+                    android:id="@+id/iv_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fly_music_music_play"
+                    android:visibility="@{viewModel.playState}"
+                    app:onClickCommand="@{viewModel.playOnClick}" />
+
+                <ImageView
+                    android:id="@+id/iv_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fly_music_music_pause"
+                    android:visibility="@{!viewModel.playState}"
+                    app:onClickCommand="@{viewModel.playOnClick}" />
+
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_h_0631"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.631" />
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fly_music_music_next"
+                app:isThrottleFirst="@{Boolean.TRUE}"
+                app:layout_constraintBottom_toBottomOf="@+id/fl_playstate"
+                app:layout_constraintStart_toStartOf="@+id/gl_h_0631"
+                app:layout_constraintTop_toTopOf="@+id/fl_playstate"
+                app:onClickCommand="@{viewModel.nextOnClick}" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_h_0818"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.818" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{viewModel.loopOnClick}"
+                app:layout_constraintBottom_toBottomOf="@+id/fl_playstate"
+                app:layout_constraintStart_toStartOf="@+id/gl_h_0818"
+                app:layout_constraintTop_toTopOf="@+id/fl_playstate">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fly_music_s_loop"
+                    android:visibility="@{viewModel.loopMode==SPKey.PLAY_LOOP_MODE_SINGLE_LOOP}" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fly_music_shuffle"
+                    android:visibility="@{viewModel.loopMode==SPKey.PLAY_LOOP_MODE_SHUFFLE_LOOP}" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fly_music_loop"
+                    android:visibility="@{viewModel.loopMode==SPKey.PLAY_LOOP_MODE_LIST_LOOP}" />
+
+            </FrameLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_h_0136"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.136" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_h_0919"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.919" />
+
+        <LinearLayout
+            android:id="@+id/ll_usb"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:background="@drawable/fly_music_right_bg"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/gl_h_0919"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/gl_right"
+            app:layout_constraintTop_toTopOf="@+id/gl_h_0136">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_all"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="@{viewModel.onClickListener}">
+
+                    <RadioButton
+                        android:id="@+id/iv_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/fly_music_button_all_song"
+                        android:button="@null"
+                        android:onClick="@{viewModel.onClickListener}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_singer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="@{viewModel.onClickListener}">
+
+                    <RadioButton
+                        android:id="@+id/iv_singer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/fly_music_button_singer"
+                        android:button="@null"
+                        android:onClick="@{viewModel.onClickListener}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_album"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="@{viewModel.onClickListener}">
+
+                    <RadioButton
+                        android:id="@+id/iv_album"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/fly_music_button_album"
+                        android:button="@null"
+                        android:onClick="@{viewModel.onClickListener}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_folder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="@{viewModel.onClickListener}">
+
+                    <RadioButton
+                        android:id="@+id/iv_folder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/fly_music_button_folder"
+                        android:button="@null"
+                        android:onClick="@{viewModel.onClickListener}" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="430.5dp"
+    android:layout_height="245.5dp"
+    android:background="@drawable/fly_music_dialog_bg">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fly_flyaudio_gl_hbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7333" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fly_flyaudio_gl_htitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1625" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fly_music_music_dilog_tip"
+        android:textColor="@color/fly_music_color_dialog_tips"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fly_flyaudio_gl_htitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="@string/fly_music_delete_music_file"
+        android:textColor="@color/fly_music_color_dialog_text_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fly_flyaudio_gl_hbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fly_flyaudio_gl_htitle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fly_flyaudio_gl_hbtn">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fly_music_dialog_btn_bg_selector"
+            android:text="@string/fly_music_cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/fly_music_dialog_text_color_selector" />
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fly_music_dialog_btn_bg_selector"
+            android:text="@string/fly_music_sure"
+            android:textAllCaps="false"
+            android:textColor="@color/fly_music_dialog_text_color_selector" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,13 +36,27 @@
 <!--        android:layout_height="wrap_content"></com.example.customlayouttest.view.HistogramView>-->
 
 
-    <com.example.customlayouttest.view.OnMesureViewTest
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="500dp"
-            android:layout_height="500dp"
-            android:text="heool"></TextView>
-    </com.example.customlayouttest.view.OnMesureViewTest>
+<!--    <com.example.customlayouttest.view.OnMesureViewTest-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <TextView-->
+<!--            android:layout_width="500dp"-->
+<!--            android:layout_height="500dp"-->
+<!--            android:text="heool"></TextView>-->
+<!--    </com.example.customlayouttest.view.OnMesureViewTest>-->
 
+    <com.example.customlayouttest.view.CustomLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#50FF00"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:textSize="20sp"
+            android:textColor="#000263"
+            android:background="@drawable/text_view_stroke"/>
+    </com.example.customlayouttest.view.CustomLayout>
+    
 </LinearLayout>

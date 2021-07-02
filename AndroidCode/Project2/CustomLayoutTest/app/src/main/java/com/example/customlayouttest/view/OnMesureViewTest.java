@@ -26,7 +26,7 @@ import androidx.annotation.Nullable;
  * UNSPECIFIED： 它不能其大小测量模式，View想多大就多大，通常情况在回执自定义View时才使用。
  *
  */
-public class OnMesureViewTest extends LinearLayout {
+public class OnMesureViewTest extends View {
 
     private static final String TAG = "OnMesureViewTest";
 
@@ -81,4 +81,8 @@ public class OnMesureViewTest extends LinearLayout {
         return result;
     }
 
+    @Override
+    public void layout(int l, int t, int r, int b) {
+        super.layout(l, t, r, b);
+    }
 }

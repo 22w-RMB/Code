@@ -13,5 +13,11 @@
         android:text="First View"
         android:textAllCaps="false"
         android:id="@+id/custom_title_btn"></Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Event View"
+        android:textAllCaps="false"
+        android:id="@+id/event_btn"></Button>
 
 </LinearLayout>

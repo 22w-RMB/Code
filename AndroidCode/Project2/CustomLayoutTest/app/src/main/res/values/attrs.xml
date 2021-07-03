@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--&lt;!&ndash;    支持的自定义属性-->
+<!--    reference:引用资源-->
+<!--    string:字符串-->
+<!--    Color：颜色-->
+<!--    boolean：布尔值-->
+<!--    dimension：尺寸值-->
+<!--    float：浮点型-->
+<!--    integer：整型-->
+<!--    fraction：百分数-->
+<!--    enum：枚举类型-->
+<!--    flag：位或运算-->
+<!--    &ndash;&gt;-->
+<resources>
+    <declare-styleable name="HistogramView">
+<!--        format表示的是属性的格式-->
+<!--        注意name 的命名不能跟系统自带的重复-->
+        <attr name="ccontent" format="string"/>
+        <attr name="isShow" format="boolean"/>
+<!--        注意name 的命名不能跟系统自带的重复-->
+        <attr name="bbackground" format="color"/>
+        <attr name="sselect" >
+<!--            此处 value 必须是 16 进制-->
+            <flag name="s1" value="0x01"/>
+            <flag name="s2" value="0x02"/>
+            <flag name="s3" value="0x03"/>
+        </attr>
+        <attr name="textColor" format="color"/>
+        <attr name="histogramColor" format="color"/>
+    </declare-styleable>
+</resources>
+
+<!--<resources>-->
+<!--    <declare-styleable name="HistogramView">-->
+<!--        <attr name="textColor" format="color"/>-->
+<!--        <attr name="histogramColor" format="color"/>-->
+<!--    </declare-styleable>-->
+<!--</resources>-->

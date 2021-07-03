@@ -1,6 +1,7 @@
 package com.example.customlayouttest.view;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -9,6 +10,8 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import androidx.annotation.Nullable;
+
+import com.example.customlayouttest.R;
 
 
 /**
@@ -21,10 +24,25 @@ public class HistogramView extends View {
     private Paint paint;
     private Path path;
 
+    //
+    private int mTextColor;
+    private int mHistogramColor;
+
     public HistogramView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         paint = new Paint();
         path = new Path();
+        initAttrs(context,attrs);
+    }
+
+    private void initAttrs(Context context, AttributeSet attrs) {
+        // 获取属性的代码
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.HistogramView);
+        mTextColor = typedArray.getColor(R.styleable.HistogramView_textColor,Color.BLACK);
+        mHistogramColor = typedArray.getColor(R.styleable.HistogramView_histogramColor,Color.GREEN);
+        //调用 recycle() 方法来释放该实例
+        typedArray.recycle();
+
     }
 
 
@@ -47,6 +65,7 @@ public class HistogramView extends View {
         // 绘制文字
         paint.reset();
         paint.setTextSize(30);
+        paint.setColor(mTextColor);
         paint.setStyle(Paint.Style.FILL);
         canvas.drawText("Froyo",160,540,paint);
         canvas.drawText("CB",280,540,paint);
@@ -58,7 +77,7 @@ public class HistogramView extends View {
 
         // 绘制直方图，下面的柱形图是用比较粗的直线来实现的
         paint.reset();
-        paint.setColor(Color.GREEN);
+        paint.setColor(mHistogramColor);
         paint.setStrokeWidth(80);
         float[] lines3={
                 200,500,200,495,

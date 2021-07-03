@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.customlayouttest.ativity.CustomTitleActivity;
+import com.example.customlayouttest.event.EventActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button custom_title_btn = (Button)findViewById(R.id.custom_title_btn);
         custom_title_btn.setOnClickListener(this);
+        Button event_btn = (Button)findViewById(R.id.event_btn);
+        event_btn.setOnClickListener(this);
 
     }
 
@@ -26,6 +29,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.custom_title_btn:
                 startActivity(new Intent(MainActivity.this, CustomTitleActivity.class));
+                break;
+            case R.id.event_btn:
+                startActivity(new Intent(MainActivity.this, EventActivity.class));
                 break;
         }
     }

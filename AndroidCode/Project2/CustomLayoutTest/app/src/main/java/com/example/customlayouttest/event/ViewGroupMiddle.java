@@ -17,6 +17,7 @@ public class ViewGroupMiddle extends RelativeLayout {
     public boolean dispatchTouchEvent(MotionEvent ev) {
         Log.i("songzheweiwang","[ViewGroupMiddle-->dispatchTouchEvent]ev="+EventUtil.parseAction(ev.getAction()));
         return super.dispatchTouchEvent(ev);
+//        return false;
     }
 
     @Override
@@ -28,6 +29,13 @@ public class ViewGroupMiddle extends RelativeLayout {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         Log.i("songzheweiwang","[ViewGroupMiddle-->onTouchEvent]event="+EventUtil.parseAction(event.getAction()));
-        return super.onTouchEvent(event);
+//        return super.onTouchEvent(event);
+//        return true;
+//        switch (event.getAction()){
+//            case MotionEvent.ACTION_UP:
+                return false;
+//            default:
+//                return true;
+//        }
     }
 }

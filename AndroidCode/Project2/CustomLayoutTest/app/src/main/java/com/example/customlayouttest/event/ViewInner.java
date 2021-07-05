@@ -1,6 +1,7 @@
 package com.example.customlayouttest.event;
 
 import android.annotation.SuppressLint;
+import android.view.View;
 import android.widget.Button;
 import android.content.Context;
 import android.util.AttributeSet;
@@ -11,7 +12,7 @@ import android.widget.RelativeLayout;
 import androidx.annotation.Nullable;
 
 @SuppressLint("AppCompatCustomView")
-public class ViewInner extends Button {
+public class ViewInner extends View {
     public ViewInner(Context context, AttributeSet attrs) {
         super(context, attrs);
     }

@@ -33,12 +33,12 @@
 <!--            ></com.example.customlayouttest.view.UnderLineTextView>-->
 <!--    </com.example.customlayouttest.view.ForegroundLinearLayout>-->
 
-        <com.example.customlayouttest.view.HistogramView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:textColor="@android:color/holo_red_light"
-        app:histogramColor="@android:color/holo_blue_bright"
-        ></com.example.customlayouttest.view.HistogramView>
+<!--        <com.example.customlayouttest.view.HistogramView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:textColor="@android:color/holo_red_light"-->
+<!--        app:histogramColor="@android:color/holo_blue_bright"-->
+<!--        ></com.example.customlayouttest.view.HistogramView>-->
 
 
 <!--    <com.example.customlayouttest.view.OnMesureViewTest-->
@@ -63,5 +63,25 @@
 <!--            android:textColor="#000263"-->
 <!--            android:background="@drawable/text_view_stroke"/>-->
 <!--    </com.example.customlayouttest.view.CustomLayout>-->
-    
+
+
+    <com.example.customlayouttest.view.CustomViewGrooup1
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="btn1"></Button>
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="btn1"></Button>
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="btn1"></Button>
+    </com.example.customlayouttest.view.CustomViewGrooup1>
+
+
 </LinearLayout>

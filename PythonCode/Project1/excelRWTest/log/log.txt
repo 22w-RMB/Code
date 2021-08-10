@@ -1,0 +1,4 @@
+2021/15/34 20:15:34:生活:CRITICAL:log_test1.py:56:critical
+2021/19/54 20:19:54:生活:CRITICAL:log_test1.py:65:critical
+2021/20/04 20:20:04:生活:CRITICAL:log_test1.py:65:critical
+2021/20/43 20:20:43:生活:CRITICAL:log_test1.py:66:critical

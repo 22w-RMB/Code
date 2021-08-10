@@ -1,0 +1,21 @@
+.F.F
+======================================================================
+FAIL: test_login_2_error (interfaceTest.test_cases.test_login.TestLogin)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\code\PythonCode\Project1\interfaceTest\test_cases\test_login.py", line 18, in test_login_2_error
+    self.assertEqual(1, 3 - 3)
+AssertionError: 1 != 0
+
+======================================================================
+FAIL: test_register_2_error (interfaceTest.test_cases.test_register.TestRegister)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\code\PythonCode\Project1\interfaceTest\test_cases\test_register.py", line 12, in test_register_2_error
+    self.assertEqual(1, 3 - 3)
+AssertionError: 1 != 0
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=2)

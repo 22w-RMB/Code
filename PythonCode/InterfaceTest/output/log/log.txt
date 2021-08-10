@@ -1,0 +1,103 @@
+2021-08-02 21:19:32,418 test_01_login.py-45:root:ERROR - 测试用例失败： 2 != 1
+2021-08-02 21:19:32,442 test_01_login.py-45:root:ERROR - 测试用例失败： 2 != 1
+2021-08-02 21:19:32,462 test_01_login.py-45:root:ERROR - 测试用例失败： 2 != 1
+2021-08-02 21:19:32,482 test_01_login.py-45:root:ERROR - 测试用例失败： 2 != 1
+2021-08-02 21:19:32,547 test_01_login.py-45:root:ERROR - 测试用例失败： 2 != 1
+2021-08-02 21:19:32,577 test_01_login.py-45:root:ERROR - 测试用例失败： 2 != 1
+2021-08-02 21:19:32,667 test_01_login.py-45:root:ERROR - 测试用例失败： 2 != 1
+2021-08-02 21:19:32,687 test_01_login.py-45:root:ERROR - 测试用例失败： 2 != 1
+2021-08-02 21:19:32,747 test_01_login.py-45:root:ERROR - 测试用例失败： 2 != 1
+2021-08-02 21:19:32,769 test_01_login.py-45:root:ERROR - 测试用例失败： 2 != 1
+2021-08-02 21:19:32,790 test_01_login.py-45:root:ERROR - 测试用例失败： 2 != 1
+2021-08-02 21:19:32,830 test_01_login.py-45:root:ERROR - 测试用例失败： 2 != 1
+2021-08-02 21:19:32,874 test_01_login.py-45:root:ERROR - 测试用例失败： 2 != 1
+2021-08-02 21:19:32,893 test_02_register.py-38:root:ERROR - 测试用例失败
+2021-08-02 21:19:32,999 test_02_register.py-38:root:ERROR - 测试用例失败
+2021-08-02 21:19:33,020 test_02_register.py-38:root:ERROR - 测试用例失败
+2021-08-02 21:19:33,161 test_02_register.py-38:root:ERROR - 测试用例失败
+2021-08-02 21:19:33,204 test_02_register.py-38:root:ERROR - 测试用例失败
+2021-08-02 21:19:33,226 test_02_register.py-38:root:ERROR - 测试用例失败
+2021-08-02 21:19:33,251 test_02_register.py-38:root:ERROR - 测试用例失败
+2021-08-02 21:19:33,273 test_02_register.py-38:root:ERROR - 测试用例失败
+2021-08-02 21:19:33,293 test_02_register.py-38:root:ERROR - 测试用例失败
+2021-08-02 21:19:33,314 test_02_register.py-38:root:ERROR - 测试用例失败
+2021-08-02 21:19:33,405 test_02_register.py-38:root:ERROR - 测试用例失败
+2021-08-02 21:19:33,426 test_02_register.py-38:root:ERROR - 测试用例失败
+2021-08-02 21:19:33,487 test_02_register.py-38:root:ERROR - 测试用例失败
+2021-08-03 20:39:22,436 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-03 20:39:22,507 test_01_login.py-55:root:ERROR - 测试用例失败： 0 != 1
+2021-08-03 20:39:22,529 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-03 20:39:22,550 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-03 20:39:22,740 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-03 20:39:22,767 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-03 20:39:22,830 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-03 20:39:22,854 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-03 20:39:22,902 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-03 20:39:22,926 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-03 20:39:22,954 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-03 20:39:22,972 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-03 20:39:22,995 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-03 20:39:23,085 test_02_register.py-43:root:ERROR - 测试用例失败
+2021-08-03 20:39:23,158 test_02_register.py-43:root:ERROR - 测试用例失败
+2021-08-03 20:39:23,178 test_02_register.py-43:root:ERROR - 测试用例失败
+2021-08-03 20:39:23,202 test_02_register.py-43:root:ERROR - 测试用例失败
+2021-08-03 20:39:23,288 test_02_register.py-43:root:ERROR - 测试用例失败
+2021-08-03 20:39:23,319 test_02_register.py-43:root:ERROR - 测试用例失败
+2021-08-03 20:39:23,404 test_02_register.py-43:root:ERROR - 测试用例失败
+2021-08-03 20:39:23,442 test_02_register.py-43:root:ERROR - 测试用例失败
+2021-08-03 20:39:23,467 test_02_register.py-43:root:ERROR - 测试用例失败
+2021-08-03 20:39:23,503 test_02_register.py-43:root:ERROR - 测试用例失败
+2021-08-03 20:39:23,584 test_02_register.py-43:root:ERROR - 测试用例失败
+2021-08-03 20:39:23,627 test_02_register.py-43:root:ERROR - 测试用例失败
+2021-08-03 20:39:23,667 test_02_register.py-43:root:ERROR - 测试用例失败
+2021-08-09 20:08:57,087 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:08:57,107 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:08:57,129 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:08:57,229 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:08:57,317 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:08:57,339 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:08:57,368 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:08:57,423 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:08:57,447 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:08:57,554 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:08:57,641 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:08:58,062 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:08:58,084 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:10:03,535 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:10:03,684 test_01_login.py-55:root:ERROR - 测试用例失败： 0 != 1
+2021-08-09 20:10:03,719 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:10:03,881 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:10:03,929 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:10:04,014 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:10:04,043 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:10:04,111 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:10:04,133 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:10:04,157 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:10:04,190 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:10:04,210 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:10:04,241 test_01_login.py-55:root:ERROR - 测试用例失败： 2 != 1
+2021-08-09 20:13:00,494 test_02_register.py-65:root:ERROR - 测试用例失败
+2021-08-09 20:13:00,692 test_02_register.py-65:root:ERROR - 测试用例失败
+2021-08-09 20:13:00,903 test_02_register.py-65:root:ERROR - 测试用例失败
+2021-08-09 20:13:01,330 test_02_register.py-65:root:ERROR - 测试用例失败
+2021-08-09 20:13:01,444 test_02_register.py-65:root:ERROR - 测试用例失败
+2021-08-09 20:13:01,666 test_02_register.py-65:root:ERROR - 测试用例失败
+2021-08-09 20:13:01,835 test_02_register.py-65:root:ERROR - 测试用例失败
+2021-08-09 20:13:02,070 test_02_register.py-65:root:ERROR - 测试用例失败
+2021-08-09 20:13:02,410 test_02_register.py-65:root:ERROR - 测试用例失败
+2021-08-09 20:13:02,545 test_02_register.py-65:root:ERROR - 测试用例失败
+2021-08-09 20:13:02,866 test_02_register.py-65:root:ERROR - 测试用例失败
+2021-08-09 20:13:03,017 test_02_register.py-65:root:ERROR - 测试用例失败
+2021-08-09 20:17:03,961 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-08-09 20:17:04,161 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-08-09 20:17:04,286 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-08-09 20:17:04,460 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-08-09 20:17:04,795 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-08-09 20:17:04,918 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-08-09 20:17:05,511 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-08-09 20:17:05,700 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-08-09 20:17:05,953 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-08-09 20:17:06,180 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-08-09 20:17:06,354 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-08-09 20:17:06,482 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-08-09 20:17:06,690 test_02_register.py-66:root:ERROR - 测试用例失败

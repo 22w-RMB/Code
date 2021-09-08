@@ -1,5 +1,6 @@
 
 import requests
+import json
 
 class RequestHandler:
     def __init__(self):

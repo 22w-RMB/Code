@@ -7,6 +7,7 @@ import time
 from pymysql.cursors import DictCursor
 
 
+
 def joinName(*args,fileName=None):
     projectPath = os.path.dirname(os.path.dirname(__file__))
     for file in args:
@@ -26,7 +27,9 @@ class ExcelConfig:
     excelName = "cases.xlsx"
     excelAbsPath = joinName("resource","excel",fileName=excelName)
     registerSheetName = "register"
+    loginSheetName = "login"
     rechargeSheetName = "recharge"
+    investSheetName = "invest"
 
 class ReportConfig:
     reportName = "report-%s.html" % (datetime.datetime.now().strftime("%m-%d %H：%M：%S"))
@@ -45,8 +48,45 @@ class SqlConfig:
 class OtherConfig:
     testCasesPath = joinName("test_cases")
     remoteHost = "http://8.129.91.152:8766"
+    preconditionData = {
+        "mobile_phone": "13845223111",
+        "pwd": "12345678d"
+    }
+    preconditionHeader={
+        "Content-Type":"application/json",
+        "X-Lemonban-Media-Type":"lemonban.v2"
+    }
+    adminData = {
+        "mobile_phone": "13888465211",
+        "pwd": "12345678"
+    }
+    registerUrl = remoteHost + "/futureloan/member/register"
+    loginUrl = remoteHost + "/futureloan/member/login"
+    rechargeUrl = remoteHost + "/futureloan/member/recharge"
+    addLoanUrl = remoteHost + "/futureloan/loan/add"
+    verifyUrl = remoteHost + "/futureloan/loan/audit"
+
+    addLoanAmount = 6300
+
+    registerData = { "mobile_phone": "#new_phone#","pwd": "12345678"}
+
+    rechargeData = { "member_id": "#member_id#", "amount": addLoanAmount }
+
+    addLoanData = {"member_id": "#member_id#",
+         "title": "报名 Java 全栈自动dsacascs化课程9.1",
+         "amount": addLoanAmount,
+         "loan_rate": 12.0,
+         "loan_term": 12,
+         "loan_date_type": 1,
+         "bidding_days": 5}
 
 
+    # 为什么此处请求数据使用 字符串 ？
+    # 因为 请求数据中有个参数是 true，json格式只能写成true，如果写成字典格式，python 无法识别 true
+    # 所以先用字符串保存，使用时再通过 json.loads(verifyData) 转换成 json 格式
+    verifyData =  '{ "loan_id": #loan_id#, "approved_or_not": true }'
 
-print(LoggerConfig().loggerAbsPath)
-# print(ExcelConfig().excelAbsPath)
+
+# print(LoggerConfig().loggerAbsPath)
+# # print(ExcelConfig().excelAbsPath)
+# print(OtherConfig.addLoanData)

@@ -1,6 +1,6 @@
 import json
 import unittest
-import ddt
+from common import my_ddt
 
 from common.db_handler import DBHandler
 from common.python_handler import ExcelConfig, OtherConfig, SqlConfig
@@ -14,7 +14,7 @@ from common.logger_handler import loggerInstance
 
 
 
-@ddt.ddt
+@my_ddt.ddt
 class TestRegister(unittest.TestCase):
 
     excelHandler = ExcelHandler(ExcelConfig.excelAbsPath)
@@ -36,7 +36,7 @@ class TestRegister(unittest.TestCase):
         self.session.close()
         self.db.close()
 
-    @ddt.data(*testData)
+    @my_ddt.data(*testData)
     def test_register(self,data):
         url = OtherConfig.remoteHost + data['url']
 

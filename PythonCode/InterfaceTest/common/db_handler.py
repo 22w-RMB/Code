@@ -17,6 +17,8 @@ class DBHandler():
 
         self.cursor.execute(sql,args=args)
 
+        self.conn.commit()
+
         if one:
             return self.cursor.fetchone()
         else:

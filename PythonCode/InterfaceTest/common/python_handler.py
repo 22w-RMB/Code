@@ -30,6 +30,12 @@ class ExcelConfig:
     loginSheetName = "login"
     rechargeSheetName = "recharge"
     investSheetName = "invest"
+    withdrawSheetName = "withdraw"
+    updateNameSheetName = "update_name"
+    auditSheetName = "audit"
+    infoSheetName = "info"
+    loansSheetName = "loans"
+    addLoanSheetName = "add_loan"
 
 class ReportConfig:
     reportName = "report-%s.html" % (datetime.datetime.now().strftime("%m-%d %H：%M：%S"))

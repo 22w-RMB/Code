@@ -6,7 +6,8 @@ from common.db_handler import DBHandler
 from common.excel_handler import ExcelHandler
 from common.python_handler import ExcelConfig, OtherConfig
 from common.request_handler import RequestHandler
-from precondition.helper import Context
+from precondition.helper import Context, replaceLabel
+
 
 @my_ddt.ddt
 class TestInfo(unittest.TestCase):
@@ -34,13 +35,24 @@ class TestInfo(unittest.TestCase):
     @my_ddt.data(*testData)
     def test_info(self, singleData):
 
-        url = OtherConfig.remoteHost + self.replaceUrl(singleData['url'])
+        url = OtherConfig.remoteHost + replaceLabel(singleData['url'])
+
+
+        if "$not_exist_member_id$" in url:
+            id = self.db.query("select * from member order by id desc limit 1;")['id'] + 10
+            url = url.replace("$not_exist_member_id$", str(id))
+
+        if "$other_user_info$" in url:
+            id = self.db.query("select * from member where id < %s order by id desc limit 1;", args=[self.context.member_id,])['id']
+            url = url.replace("$other_user_info$", str(id))
+
         print(url)
 
-        token = self.context.admin_token
-        if "$not_admin$" in singleData['headers']:
-            token = self.context.token
+        token = self.context.token
+        if "$admin$" in singleData['headers']:
+            token = self.context.admin_token
 
+        print(singleData['headers'])
         headers = json.loads(singleData['headers'])
         headers['Authorization'] = token
 
@@ -57,14 +69,4 @@ class TestInfo(unittest.TestCase):
             print("测试用例不通过： %s" % e)
             raise e
 
-    def replaceUrl(self, url):
 
-        if "#member_id#" in url:
-            id = self.context.admin_id
-            return url.replace("#member_id#", str(id))
-
-        if "$not_exist_member_id$" in url:
-            id = self.db.query("select * from member order by id desc limit 1;")['id'] + 10
-            return url.replace("$not_exist_member_id$", str(id))
-
-        return url

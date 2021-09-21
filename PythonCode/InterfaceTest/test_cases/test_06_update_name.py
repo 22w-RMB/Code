@@ -2,6 +2,7 @@ import json
 import unittest
 
 from common import my_ddt
+from common.db_handler import DBHandler
 from common.excel_handler import ExcelHandler
 from common.python_handler import OtherConfig, ExcelConfig
 from common.request_handler import RequestHandler
@@ -16,7 +17,7 @@ class TestUpdateName(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
-
+        cls.db = DBHandler()
         pass
 
     def setUp(self) -> None:
@@ -31,7 +32,7 @@ class TestUpdateName(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls) -> None:
-
+        cls.db.close()
         pass
 
     @my_ddt.data(*testData)
@@ -44,16 +45,21 @@ class TestUpdateName(unittest.TestCase):
         headers['Authorization'] = self.context.token
 
         requestData = replaceLabel(singleData['data'])
-        print(requestData)
 
         if '$wrong_member_id$' in requestData:
             requestData = requestData.replace("$wrong_member_id$", str(self.context.member_id + 2))
 
-        responseData = self.session.visit(method=singleData['method'],
-                           url=url,
-                           headers=headers,
-                           json=json.loads(requestData))
+        if "$equal_other_user$" in requestData:
+            otherUserName = self.db.query("select * from member where id < %s order by id limit 1;",args=[self.context.member_id,])['reg_name']
+            print(otherUserName)
+            requestData = requestData.replace("$equal_other_user$", otherUserName)
 
+        print(requestData)
+        responseData = self.session.visit(method=singleData['method'],
+                                          url=url,
+                                          headers=headers,
+                                          json=json.loads(requestData))
+        print(responseData)
         try:
             # 第一个是 Expected，期望结果，第二个是 实际结果
             self.assertEqual(singleData['expect'], responseData['code'],)
@@ -64,3 +70,5 @@ class TestUpdateName(unittest.TestCase):
             raise e
 
         pass
+
+

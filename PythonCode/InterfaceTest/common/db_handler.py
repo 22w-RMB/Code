@@ -1,11 +1,21 @@
 
 
 import pymysql
+from pymysql.cursors import DictCursor
+
 from common.python_handler import SqlConfig
 
 class DBHandler():
 
-    def __init__(self,host , port, user, password, charset, database, cursorclass, **kwargs):
+    def __init__(self,
+                 host = "8.129.91.152",
+                 port = 3306,
+                 user = "future",
+                 password = "123456",
+                 charset = "utf8",  # 不能是 utf-8
+                 database = "futureloan",
+                 cursorclass = DictCursor,  # 将获取到的游标以字典格式输出,
+                 **kwargs):
         self.conn = pymysql.connect(host=host , port=port,
                        user = user, password=password,
                        charset=charset,  # 不能是 utf-8

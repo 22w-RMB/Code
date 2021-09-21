@@ -52,21 +52,27 @@ class TestLoans(unittest.TestCase):
 
     def replaceUrl(self, requestUrl):
 
-        pageIndex = random.randint(1, self.loanCount)
-        pageSize = self.loanCount // pageIndex
+        pageSize = random.randint(1, self.loanCount//10)
+        pageIndex = self.loanCount // pageSize
+        randomIndex = random.randint(1, pageIndex)
 
         if "$ramdom_size$" in requestUrl:
             requestUrl = requestUrl.replace("$ramdom_size$" , str(pageSize))
 
         if "$ramdom_index$" in requestUrl:
-            requestUrl = requestUrl.replace("$ramdom_index$" , str(pageIndex))
+            requestUrl = requestUrl.replace("$ramdom_index$" , str(randomIndex))
 
         if "$more_index$" in requestUrl:
-            requestUrl = requestUrl.replace("$more_index$", str(pageIndex + 2))
+            requestUrl = requestUrl.replace("$more_index$", str(pageIndex + 3))
             pass
 
         if "$more_page$" in requestUrl:
             requestUrl = requestUrl.replace("$more_page$", str(self.loanCount + 2))
             pass
 
+        if "$equal_loan_count$" in  requestUrl:
+            requestUrl = requestUrl.replace("$equal_loan_count$", str(self.loanCount))
+
         return requestUrl
+
+

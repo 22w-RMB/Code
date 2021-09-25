@@ -57,7 +57,17 @@ if __name__ == '__main__':
     a = ExcelHandler(r"/resource/excel/cases.xlsx")
     # print(a.readSheetAllData("register"))
     testData = ExcelHandler(ExcelConfig.excelAbsPath).readSheetAllData(ExcelConfig.registerSheetName)
-    print(testData[0]['url'])
+    print(testData[0])
     # wb = openpyxl.load_workbook(r"D:\code\PythonCode\InterfaceTest\resource\cases.xlsx")
     # sheet = wb["register"]
     # print(list())
+
+    print(type(zip(['date', 'c7', 'c8', 'c9'], [1, 2, 3, 4])))
+    print(list(zip(['date', 'c7', 'c8', 'c9'], [1, 2, 3, 4])))
+    print(dict(zip(['date', 'c7', 'c8', 'c9'], [1, 2, 3, 4])))
+    '''
+    <class 'zip'>
+    [('date', 1), ('c7', 2), ('c8', 3), ('c9', 4)]
+    {'date': 1, 'c7': 2, 'c8': 3, 'c9': 4}
+    '''
+    pass

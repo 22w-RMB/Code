@@ -48,7 +48,9 @@ class TestRecharge(unittest.TestCase):
 
         url = OtherConfig.remoteHost + data['url']
         headers = json.loads(data['headers'])
-        headers['Authorization'] = self.context.token
+        token = self.context.token
+        print(token)
+        headers['Authorization'] = token
 
         # 查询未充值前账户的余额
         sql = "select * from member where id=%s;"

@@ -13,7 +13,7 @@ class Context:
     def token(self):
         res = login(OtherConfig.preconditionData)
         # jsonpath ==> 专门用来解析 json 的路径工具
-        # print(res)
+        print(res)
         token = jsonpath.jsonpath(res, "$..token")[0]
         tokenType = jsonpath.jsonpath(res, "$..token_type")[0]
 

@@ -44,5 +44,5 @@ if __name__ == '__main__':
                        user = SqlConfig.user, password=SqlConfig.password,
                        charset=SqlConfig.charset,  # 不能是 utf-8
                        database=SqlConfig.database,cursorclass=SqlConfig.cursorclass)
-    res = db.query("select * from  member where mobile_phone=%s",args=[135])
+    res = db.query("select id, reg_name from  member limit 2;",one=True)
     print(res)

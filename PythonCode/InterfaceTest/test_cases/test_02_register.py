@@ -18,7 +18,7 @@ from common.logger_handler import loggerInstance
 class TestRegister(unittest.TestCase):
 
     excelHandler = ExcelHandler(ExcelConfig.excelAbsPath)
-    testData = excelHandler.readSheetAllData(ExcelConfig.rechargeSheetName)
+    testData = excelHandler.readSheetAllData(ExcelConfig.registerSheetName)
 
 
     def setUp(self) -> None:
@@ -53,14 +53,16 @@ class TestRegister(unittest.TestCase):
                 mobile = self.db.query("select * from  member where mobile_phone=%s limit 1;",args=[gen_mobile])
                 if not mobile:
                     break
-            data['data'] = data['data'].replace("#exist_phone#", gen_mobile)
+            data['data'] = data['data'].replace("#new_phone#", gen_mobile)
+
+        print(data['data'])
         jsonData = self.session.visit(method=data['method'], url=url,
                                       headers=json.loads(data['headers']),
                                       json=json.loads(data['data']))
-        # print(jsonData)
+        print(jsonData)
         try:
             self.excelHandler.writeData(ExcelConfig.registerSheetName,int(data['case_id'])+1,9,jsonData['code'])
-            self.assertEqual(jsonData['code'], 1)
+            self.assertEqual(data['expect'], jsonData['code'])
             self.excelHandler.writeData(ExcelConfig.registerSheetName, int(data['case_id']) + 1, 10, "通过")
         except AssertionError as e:
             loggerInstance.error("测试用例失败")

@@ -354,3 +354,108 @@
 2021-09-08 20:25:05,966 test_04_invest.py-66:root:ERROR - 测试用例失败
 2021-09-08 20:25:06,516 test_04_invest.py-66:root:ERROR - 测试用例失败
 2021-09-08 20:25:07,096 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 20:49:11,673 test_01_login.py-64:root:ERROR - 测试用例失败，报错信息： 2 != 0
+2021-09-25 20:49:12,093 test_01_login.py-64:root:ERROR - 测试用例失败，报错信息： 2 != 0
+2021-09-25 20:49:12,339 test_01_login.py-64:root:ERROR - 测试用例失败，报错信息： 1001 != 0
+2021-09-25 20:49:12,459 test_01_login.py-64:root:ERROR - 测试用例失败，报错信息： 1 != 0
+2021-09-25 20:49:12,686 test_01_login.py-64:root:ERROR - 测试用例失败，报错信息： 1 != 0
+2021-09-25 20:49:12,968 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 20:49:13,253 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 20:49:13,675 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 20:49:24,023 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 20:49:24,343 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 20:49:24,613 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 20:58:49,747 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 20:58:50,514 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 20:58:50,911 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 20:58:51,262 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 20:58:51,606 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 20:58:51,996 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 20:58:52,386 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:00:15,923 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:00:16,278 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:00:16,597 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:00:16,947 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:00:17,195 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:00:17,445 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:00:17,867 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:01:28,243 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:01:28,629 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:01:29,547 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:01:29,870 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:01:31,539 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:01:32,183 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:01:32,520 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:01:32,935 test_02_register.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:06:16,008 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:06:16,582 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:06:18,708 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:06:19,121 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:06:21,932 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:06:22,251 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:06:22,618 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:06:22,952 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:07:21,275 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:07:21,847 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:07:22,947 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:07:23,294 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:07:25,080 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:07:25,409 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:07:25,681 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:07:25,976 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:08:00,122 test_03_recharge.py-89:root:INFO - 测试用例成功
+2021-09-25 21:08:00,454 test_03_recharge.py-92:root:ERROR - 测试用例失败
+2021-09-25 21:08:01,815 test_03_recharge.py-92:root:ERROR - 测试用例失败
+2021-09-25 21:08:02,023 test_03_recharge.py-92:root:ERROR - 测试用例失败
+2021-09-25 21:08:02,332 test_03_recharge.py-89:root:INFO - 测试用例成功
+2021-09-25 21:08:02,747 test_03_recharge.py-92:root:ERROR - 测试用例失败
+2021-09-25 21:08:03,149 test_03_recharge.py-92:root:ERROR - 测试用例失败
+2021-09-25 21:08:19,967 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:08:20,593 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:08:21,396 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:08:22,970 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:08:23,547 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:08:24,168 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:08:24,948 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:08:26,413 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:08:27,061 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:08:27,564 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:08:28,056 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:08:28,648 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:09:10,143 test_01_login.py-64:root:ERROR - 测试用例失败，报错信息： 2 != 0
+2021-09-25 21:09:10,719 test_01_login.py-64:root:ERROR - 测试用例失败，报错信息： 1001 != 0
+2021-09-25 21:09:10,971 test_01_login.py-64:root:ERROR - 测试用例失败，报错信息： 1001 != 0
+2021-09-25 21:09:11,090 test_01_login.py-64:root:ERROR - 测试用例失败，报错信息： 1 != 0
+2021-09-25 21:09:11,225 test_01_login.py-64:root:ERROR - 测试用例失败，报错信息： 1 != 0
+2021-09-25 21:09:11,962 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:09:12,404 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:09:13,283 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:09:13,624 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:09:15,467 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:09:15,847 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:09:16,165 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:09:16,608 test_02_register.py-68:root:ERROR - 测试用例失败
+2021-09-25 21:09:17,117 test_03_recharge.py-89:root:INFO - 测试用例成功
+2021-09-25 21:09:17,538 test_03_recharge.py-92:root:ERROR - 测试用例失败
+2021-09-25 21:09:17,791 test_03_recharge.py-92:root:ERROR - 测试用例失败
+2021-09-25 21:09:18,213 test_03_recharge.py-92:root:ERROR - 测试用例失败
+2021-09-25 21:09:18,506 test_03_recharge.py-92:root:ERROR - 测试用例失败
+2021-09-25 21:09:18,818 test_03_recharge.py-92:root:ERROR - 测试用例失败
+2021-09-25 21:09:19,029 test_03_recharge.py-92:root:ERROR - 测试用例失败
+2021-09-25 21:09:20,435 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:09:20,914 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:09:21,822 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:09:23,312 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:09:23,819 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:09:24,570 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:09:25,058 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:09:25,686 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:09:26,209 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:09:26,860 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:09:27,407 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:09:28,012 test_04_invest.py-66:root:ERROR - 测试用例失败
+2021-09-25 21:21:37,179 test_01_login.py-64:root:ERROR - 测试用例失败，报错信息： 2 != 0
+2021-09-25 21:21:37,790 test_01_login.py-64:root:ERROR - 测试用例失败，报错信息： 1001 != 0
+2021-09-25 21:21:38,038 test_01_login.py-64:root:ERROR - 测试用例失败，报错信息： 1001 != 0
+2021-09-25 21:21:38,173 test_01_login.py-64:root:ERROR - 测试用例失败，报错信息： 1 != 0
+2021-09-25 21:21:38,338 test_01_login.py-64:root:ERROR - 测试用例失败，报错信息： 1 != 0

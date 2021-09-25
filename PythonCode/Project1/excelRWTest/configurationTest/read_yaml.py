@@ -10,7 +10,7 @@ import yaml
 
 # 读取 yaml 配置，加载配置项
 with open("yamlTest.yaml", encoding="utf-8") as f:
-    data = yaml.load(f.read(), Loader=yaml.FullLoader)
+    data = yaml.load(f, Loader=yaml.FullLoader)
     print(data)
 
 

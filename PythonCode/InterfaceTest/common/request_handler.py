@@ -9,7 +9,7 @@ class RequestHandler:
     def visit(self,method,url, params=None, data=None, headers=None,json = None,**kwargs):
 
         res = self.session.request(method=method,url=url, params=params, data=data, headers=headers,json = json,**kwargs)
-
+        print(res.cookies)
         try:
             return res.json()
         except:

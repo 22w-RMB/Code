@@ -55,8 +55,8 @@ class OtherConfig:
     testCasesPath = joinName("test_cases")
     remoteHost = "http://8.129.91.152:8766"
     preconditionData = {
-        "mobile_phone": "13845223111",
-        "pwd": "12345678d"
+        "mobile_phone": "13541186875",
+        "pwd": "12345678"
     }
     preconditionHeader={
         "Content-Type":"application/json",

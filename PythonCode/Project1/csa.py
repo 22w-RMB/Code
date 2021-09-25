@@ -134,3 +134,16 @@ registerheaders = {'Content-Type': 'application/json', 'X-Lemonban-Media-Type': 
 #
 
 print(type(str(registerheaders)))
+
+
+str1 = "#member_id#sssavdsn#loan_id#"
+
+pattern = '#(.*?)#'
+
+import re
+res = re.findall(pattern,str1)
+rr = re.search(pattern, str1).group(1)
+s = re.sub(pattern, "替换成我", str1 )
+print(res)
+print(rr)
+print(s)

@@ -51,18 +51,19 @@ handler.setLevel("WARNING")
 #  levelname：是打印的日志的级别
 #  message：是打印的日志信息
 file_format = logging.Formatter(style="{",fmt="{asctime}:{name}:{levelname}:{filename}:{lineno}:{message}",
-                                datefmt="%Y/%M/%S %H:%M:%S")
+                                datefmt="%Y/%m/%d %H:%M:%S")
 handler.setFormatter(file_format)
 logger.addHandler(handler)
 
 #  如下日志处理器是设置控制台输出
 console_output = logging.StreamHandler()
-console_output.setLevel("CRITICAL")
-console_fmt = logging.Formatter("%(name)s-%(levelname)s-%(message)s")
+console_output.setLevel("ERROR")
+console_fmt = logging.Formatter(fmt="%(asctime)s-%(name)s-%(levelname)s-%(message)s",datefmt="%Y/%m/%d %H:%M:%S")
 console_output.setFormatter(console_fmt)
 logger.addHandler(console_output)
 
 logger.info("info")
 logger.debug("debug")
 logger.warning("warning")
+logger.error("error")
 logger.critical("critical")

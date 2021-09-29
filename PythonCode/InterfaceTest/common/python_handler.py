@@ -9,7 +9,9 @@ from pymysql.cursors import DictCursor
 
 
 def joinName(*args,fileName=None):
+    # print(__file__)
     projectPath = os.path.dirname(os.path.dirname(__file__))
+    # print(projectPath)
     for file in args:
         projectPath = os.path.join(projectPath,file)
         if not os.path.exists(projectPath):
@@ -17,6 +19,7 @@ def joinName(*args,fileName=None):
     if fileName:
         projectPath = os.path.join(projectPath, fileName)
     return projectPath
+
 
 class LoggerConfig:
     logName = "log.txt"

@@ -35,8 +35,8 @@ class DBHandler():
             return self.cursor.fetchall()
 
     def close(self):
-
         self.cursor.close()
+        self.conn.close()
 
 
 if __name__ == '__main__':

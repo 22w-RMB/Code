@@ -76,9 +76,10 @@ def register(isNeedRegister=True):
 
             break;
     db.close()
-
+    print("最终生成的手机号码为：%s" % new_mobile)
     OtherConfig.registerData['mobile_phone'] = phone
     session =RequestHandler()
+    print(OtherConfig)
     res = session.visit(url=OtherConfig.registerUrl,method="post",
                         headers=OtherConfig.preconditionHeader,json=OtherConfig.registerData)
     session.close()

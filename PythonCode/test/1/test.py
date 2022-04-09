@@ -166,6 +166,35 @@ def getActualQuantity(totalNumber) -> list:
 
 
 
+# 计算中标段数
+def calculateBlocksNumber(quantityList, pType, number):
+    col = 0
+    if pType == "日前":
+        col = 4
+    else:
+        col = 5
+
+
+    for row in range(1,number+1):
+
+        value = quantityList[row-1]
+        res = -1
+
+        for i in range(0, outputLen):
+
+            left = output[i]['起始出力']
+            right = output[i]['终止出力']
+
+            if value == 0:
+                res = 1
+                break
+
+            if value > left and value<=right:
+                res = i+1
+                break
+
+        excelHandler.writeData(ExcelConfig.newSheetName, row +1 , col, str(res))
+
 
 
 print("------------------------")
@@ -180,6 +209,10 @@ totalNumber = 96
 # 获得
 l1 = getRecentlyQuantity(totalNumber)
 l2 = getActualQuantity(totalNumber)
+
+calculateBlocksNumber(l1,"日前",totalNumber)
+calculateBlocksNumber(l2,"实时",totalNumber)
+
 
 # print("日前")
 print(l1)
